@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tienda FCB</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">INICIO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data- 
+    target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria- expanded="false" 
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item active">
+    <a class="nav-link" href="cervantespag4.html">MERCANCIA<span class="sr- only">(pedidos)</span></a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="cervantespag1.html">HISTORIA</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="cervantespag2.html" tabindex="-1">CULERS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="cervantespag3.html" tabindex="-1">PLANTILLA</a>
+        </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+    </form>
+    </div>
+    </nav>   
+
+    <style>
+        body {
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .banner {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .banner::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0) 60%,
+                rgba(242,242,242,1) 100%
+            );
+        }
+
+        .menu {
+            margin: 20px auto;
+        }
+
+        .primer-equipo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 25px 0;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .producto {
+            background: white;
+            width: 280px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            text-align: center;
+            
+        }
+
+        .producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .producto h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .producto p {
+            color: #666;
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .precio {
+            font-size: 20px;
+            color: #27ae60;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px 0 20px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="banner">
+    <img src="imagenes/barcelonabb.jpg">
+</div>
+
+<table width="50%" align="center" border="5" class="menu">
+    <tr align="center">
+        <td><a href="index.html">INICIO</a></td>
+        <td><a href="cervantespag1.html">HISTORIA</a></td>
+        <td><a href="cervantespag2.html">CULERS</a></td>
+        <td><a href="cervantespag3.html">JUGADORES</a></td>
+        <td><a href="cervantespag4.html">MERCANCIA</a></td>
+    </tr>
+</table>
+
+<div class="primer-equipo">TIENDA FCB</div>
+
+<div class="contenedor">
+
+    <div class="producto">
+        <img src="imagenes/messi10.jpg">
+        <h2>CAMISETA AUTOGRAFIADA POR MESSI</h2>
+        <p>SOLO EXISTEN 2.</p>
+        <div class="precio">2000$</div>
+        <button class="btn" onclick="comprar('Camiseta Messi')">Comprar 🛒</button>
+    </div>
+
+    <div class="producto">
+        <img src="imagenes/barcelonatravis.jpg">
+        <h2>FC BARCELONA X TRAVIS SCOTT</h2>
+        <p>FIRMADA POR TRAVIS.</p>
+        <div class="precio">1300$</div>
+        <button class="btn" onclick="comprar('Barcelona x Travis')">Comprar 🛒</button>
+    </div>
+
+    <div class="producto">
+        <img src="imagenes/2026.jpg">
+        <h2>CAMISETA LOCAL FC BARCELONA 25/26</h2>
+        <p>LIMITADA.</p>
+        <div class="precio">250$</div>
+        <button class="btn" onclick="comprar('Camiseta 25/26')">Comprar 🛒</button>
+    </div>
+
+    <div class="producto">
+        <img src="imagenes/tarjetas.jpg">
+        <h2>TARJETAS COLECCIONABLES FC BARCELONA</h2>
+        <p>EXCELENTE CALIDAD.</p>
+        <div class="precio">50$</div>
+        <button class="btn" onclick="comprar('Tarjetas')">Comprar 🛒</button>
+    </div>
+
+    <div class="producto">
+        <img src="imagenes/sudadera.jpg">
+        <h2>HOODIE FC BARCELONA</h2>
+        <p>EDICIÓN ESPECIAL.</p>
+        <div class="precio">120$</div>
+        <button class="btn" onclick="comprar('Hoodie')">Comprar 🛒</button>
+    </div>
+
+    <div class="producto">
+        <img src="imagenes/tercera.jpg">
+        <h2>TERCERA EQUIPACION FC BARCELONA</h2>
+        <p>ALTA CALIDAD.</p>
+        <div class="precio">250$</div>
+        <button class="btn" onclick="comprar('Tercera equipación')">Comprar 🛒</button>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+    <div class="col">
+    <font zise="10" color="red"><b>PEDIDOS AGREGUE SUS DATOS</b></font>
+    <form>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="inputEmail4">Correo</label>
+    <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="form-group col-md-6">
+    <label for="inputPassword4">Contrase&ntilde;a</label>
+    <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    </div>
+    <div class="form-group">
+    <label for="inputAddress">Direcci&oacute;n</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="form-group">
+    <label for="inputAddress2">Direcci&oacute;n 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or 
+    floor">
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="inputCity">Ciudad</label>
+    <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+    <label for="inputState">Estado</label>
+    <select id="inputState" class="form-control">
+    <option selected>Escoje...</option>
+    <option>...</option>
+    </select>
+    </div>
+    <div class="form-group col-md-2">
+    <label for="inputZip">C&oacute;digo Postal</label>
+    <input type="text" class="form-control" id="inputZip">
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="gridCheck">
+    <label class="form-check-label" for="gridCheck"> Activar
+    </label>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar Datos</button>
+    </form>
+    </div>
+    </div>
+    </div>  
+
+<h3 align="center">Redes Sociales</h3>
+<table width="80%" align="center" border="3">
+<tr>
+<td><a href="https://www.facebook.com/fcbarcelona/about"><img src="imagenes/facebook.jpg" width="10%"></a></td>
+<td><a href="https://www.instagram.com/fcbarcelona/"><img src="imagenes/instagram.jpg" width="10%"></a></td>
+<td><a href="https://youtube.com/fcbarcelona"><img src="imagenes/youtube.png" width="10%"></a></td>
+<td><a href="index.html"><img src="imagenes/whatsapp.jpg" width="10%"></a></td>
+</tr>
+</table>
+
+<script>
+function comprar(producto) {
+    alert("Has seleccionado: " + producto);
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
